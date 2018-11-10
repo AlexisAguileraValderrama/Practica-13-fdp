@@ -1,0 +1,15 @@
+Contacto 1
+Nombre: Miku
+Dirección: Miku
+Número: Miku
+
+Contacto 2
+Nombre: Miku
+Dirección: Miku
+Número: MIKU
+
+Contacto 3
+Nombre: Miku
+Dirección: Miku
+Número: Miku
+
