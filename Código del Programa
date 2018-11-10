@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct contacto{
+char nom[100];
+char dir[100];
+char num[20];
+};
+
+const char *d[4] = {"Nombre: ","Dirección: ","Número: "};
+
+main(){
+	
+	struct contacto c[5];
+	
+	FILE *archivo;
+	archivo = fopen("directorio.txt", "w");
+	
+	for (int i = 1; i < 4; i++){	
+		
+		printf("Contacto %d \n",i);
+		fputs("Contacto ",archivo);
+		fprintf(archivo, "%d",i);
+		fputs("\n",archivo);
+		
+		printf("Nombre: ");
+		gets(c[i].nom);
+		fputs(d[0],archivo);
+		fputs(strcat(c[i].nom,"\n"),archivo);
+		
+		printf("Dirección: ");
+		gets(c[i].dir);
+		fputs(d[1],archivo);
+		fputs(strcat(c[i].dir,"\n"),archivo);
+		
+		printf("Numero telefónico :");
+		gets(c[i].num);
+		fputs(d[2],archivo);
+		fputs(strcat(c[i].num,"\n\n"),archivo);
+		
+		system("cls");
+		
+	}
+	
+	fclose(archivo);
+}
